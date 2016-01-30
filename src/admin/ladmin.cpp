@@ -62,7 +62,8 @@
 
 #include "../poison.hpp"
 
-
+/// \namespace tmwa
+/// \brief tmwa namespace
 namespace tmwa
 {
 DIAG_PUSH();
@@ -72,6 +73,9 @@ void SessionDeleter::operator()(SessionData *)
     assert(false && "ladmin does not have sessions"_s);
 }
 DIAG_POP();
+
+/// \namespace tmwa::admin
+///	\brief admin namespace
 
 namespace admin
 {
