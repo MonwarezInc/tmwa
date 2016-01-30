@@ -78,162 +78,164 @@ namespace admin
 #define Iprintf if (tmwa::admin::eathena_interactive_session) PRINTF
 
 //-------------------------------------------------------------------------
-//  LIST of COMMANDs that you can type at the prompt:
-//    To use these commands you can only type only the first letters.
-//    You must type a minimum of letters (you can not type 'a',
-//      because ladmin doesn't know if it's for 'aide' or for 'add')
-//    <Example> q <= quit, li <= list, pass <= password, etc.
-//
-//  Note: every time you must give a account_name, you can use "" or '' (spaces can be included)
-//
-//  help/?
-//    Display the description of the commands
-//  help/? [command]
-//    Display the description of the specified command
-//
-//  add <account_name> <sex> <password>
-//    Create an account with the default email (a@a.com).
-//    Concerning the sex, only the first letter is used (F or M).
-//    The e-mail is set to a@a.com (default e-mail). It's like to have no e-mail.
-//    When the password is omitted, the input is done without displaying of the pressed keys.
-//    <example> add testname Male testpass
-//
-//  ban yyyy/mm/dd hh:mm:ss <account name>
-//    Changes the final date of a banishment of an account.
-//    Like banset, but <account name> is at end.
-//
-//  banadd <account_name> <modifier>
-//    Adds or substracts time from the final date of a banishment of an account.
-//    Modifier is done as follows:
-//      Adjustment value (-1, 1, +1, etc...)
-//      Modified element:
-//        a or y: year
-//        m:  month
-//        j or d: day
-//        h:  hour
-//        mn: minute
-//        s:  second
-//    <example> banadd testname +1m-2mn1s-6y
-//              this example adds 1 month and 1 second, and substracts 2 minutes and 6 years at the same time.
-//  NOTE: If you modify the final date of a non-banished account,
-//        you fix the final date to (actual time +- adjustments)
-//
-//  banset <account_name> yyyy/mm/dd [hh:mm:ss]
-//    Changes the final date of a banishment of an account.
-//    Default time [hh:mm:ss]: 23:59:59.
-//  banset <account_name> 0
-//    Set a non-banished account (0 = unbanished).
-//
-//  block <account name>
-//    Set state 5 (You have been blocked by the GM Team) to an account.
-//    Like state <account name> 5.
-//
-//  check <account_name> <password>
-//    Check the validity of a password for an account
-//    NOTE: Server will never sends back a password.
-//          It's the only method you have to know if a password is correct.
-//          The other method is to have a ('physical') access to the accounts file.
-//
-//  create <account_name> <sex> <email> <password>
-//    Like the 'add' command, but with e-mail moreover.
-//    <example> create testname Male my@mail.com testpass
-//
-//  delete <account name>
-//    Remove an account.
-//    This order requires confirmation. After confirmation, the account is deleted.
-//
-//  email <account_name> <email>
-//    Modify the e-mail of an account.
-//
-//  getcount
-//    Give the number of players online on all char-servers.
-//
-//  gm <account_name> [GM_level]
-//    Modify the GM level of an account.
-//    Default value remove GM level (GM level = 0).
-//    <example> gm testname 80
-//
-//  id <account name>
-//    Give the id of an account.
-//
-//  info <account_id>
-//    Display complete information of an account.
-//
-//  kami <message>
-//    Sends a broadcast message on all map-server (in yellow).
-//  kamib <message>
-//    Sends a broadcast message on all map-server (in blue).
-//
-//  list [start_id [end_id]]
-//    Display a list of accounts.
-//    'start_id', 'end_id': indicate end and start identifiers.
-//    Research by name is not possible with this command.
-//    <example> list 10 9999999
-//
-//  listban [start_id [end_id]]
-//    Like list/ls, but only for accounts with state or banished
-//
-//  listgm [start_id [end_id]]
-//    Like list/ls, but only for GM accounts
-//
-//  listok [start_id [end_id]]
-//    Like list/ls, but only for accounts without state and not banished
-//
-//  memo <account_name> <memo>
-//    Modify the memo of an account.
-//    'memo': it can have until 253 characters (with spaces or not).
-//
-//  name <account_id>
-//    Give the name of an account.
-//
-//  password <account_name> <new_password>
-//    Change the password of an account.
-//    When new password is omitted, the input is done without displaying of the pressed keys.
-//
-//  quit/end/exit
-//    End of the program of administration
-//
-//  reloadgm
-//    Reload GM configuration file
-//
-//  search <expression>
-//    Seek accounts.
-//    Displays the accounts whose names correspond.
-//  search -r/-e/--expr/--regex <expression>
-//    Seek accounts by regular expression.
-//    Displays the accounts whose names correspond.
-//
-//  sex <account_name> <sex>
-//    Modify the sex of an account.
-//    <example> sex testname Male
-//
-//  state <account_name> <new_state> <error_message_#7>
-//    Change the state of an account.
-//    'new_state': state is the state of the packet 0x006a + 1. The possibilities are:
-//                 0 = Account ok            6 = Your Game's EXE file is not the latest version
-//                 1 = Unregistered ID       7 = You are Prohibited to log in until %s
-//                 2 = Incorrect Password    8 = Server is jammed due to over populated
-//                 3 = This ID is expired    9 = No MSG
-//                 4 = Rejected from Server  100 = This ID has been totally erased
-//                 5 = You have been blocked by the GM Team
-//                 all other values are 'No MSG', then use state 9 please.
-//    'error_message_#7': message of the code error 6 = Your are Prohibited to log in until %s (packet 0x006a)
-//
-//  unban/unbanish <account name>
-//    Unban an account.
-//    Like banset <account name> 0.
-//
-//  unblock <account name>
-//    Set state 0 (Account ok) to an account.
-//    Like state <account name> 0.
-//
-//  version
-//    Display the version of the login-server.
-//
-//  who <account name>
-//    Displays complete information of an account.
-//
-//-------------------------------------------------------------------------
+/// \file ladmin.cpp
+///  \brief LIST of COMMANDs that you can type at the prompt:
+///
+///    To use these commands you can only type only the first letters.
+///    You must type a minimum of letters (you can not type 'a',
+///      because ladmin doesn't know if it's for 'aide' or for 'add')
+///    <Example> q <= quit, li <= list, pass <= password, etc.
+///
+///  Note: every time you must give a account_name, you can use "" or '' (spaces can be included)
+///
+///  \code{.unparsed} help/? \endcode
+///    Display the description of the commands
+///  \code{.unparsed}help/? [command] \endcode
+///    Display the description of the specified command
+///
+///  \code{.unparse}add <account_name> <sex> <password> \endcode
+///    Create an account with the default email (a@a.com).
+///    Concerning the sex, only the first letter is used (F or M).
+///    The e-mail is set to a@a.com (default e-mail). It's like to have no e-mail.
+///    When the password is omitted, the input is done without displaying of the pressed keys.
+///     Example \code{.unparse}add testname Male testpass\endcode
+///
+///  ban yyyy/mm/dd hh:mm:ss <account name>
+///    Changes the final date of a banishment of an account.
+///    Like banset, but <account name> is at end.
+///
+///  banadd <account_name> <modifier>
+///    Adds or substracts time from the final date of a banishment of an account.
+///    Modifier is done as follows:
+///      Adjustment value (-1, 1, +1, etc...)
+///      Modified element:
+///        a or y: year
+///        m:  month
+///        j or d: day
+///        h:  hour
+///        mn: minute
+///        s:  second
+///    <example> banadd testname +1m-2mn1s-6y
+///              this example adds 1 month and 1 second, and substracts 2 minutes and 6 years at the same time.
+///  NOTE: If you modify the final date of a non-banished account,
+///        you fix the final date to (actual time +- adjustments)
+///
+///  banset <account_name> yyyy/mm/dd [hh:mm:ss]
+///    Changes the final date of a banishment of an account.
+///    Default time [hh:mm:ss]: 23:59:59.
+///  banset <account_name> 0
+///    Set a non-banished account (0 = unbanished).
+///
+///  block <account name>
+///    Set state 5 (You have been blocked by the GM Team) to an account.
+///    Like state <account name> 5.
+///
+///  check <account_name> <password>
+///    Check the validity of a password for an account
+///    NOTE: Server will never sends back a password.
+///          It's the only method you have to know if a password is correct.
+///          The other method is to have a ('physical') access to the accounts file.
+///
+///  create <account_name> <sex> <email> <password>
+///    Like the 'add' command, but with e-mail moreover.
+///    <example> create testname Male my@mail.com testpass
+///
+///  delete <account name>
+///   Remove an account.
+///    This order requires confirmation. After confirmation, the account is deleted.
+///
+///  email <account_name> <email>
+///    Modify the e-mail of an account.
+///
+///  getcount
+///    Give the number of players online on all char-servers.
+///
+///  gm <account_name> [GM_level]
+///    Modify the GM level of an account.
+///    Default value remove GM level (GM level = 0).
+///    <example> gm testname 80
+///
+///  id <account name>
+///    Give the id of an account.
+///
+/// info <account_id>
+///    Display complete information of an account.
+///
+///  kami <message>
+///    Sends a broadcast message on all map-server (in yellow).
+///  kamib <message>
+///    Sends a broadcast message on all map-server (in blue).
+///
+///  list [start_id [end_id]]
+///    Display a list of accounts.
+///    'start_id', 'end_id': indicate end and start identifiers.
+///    Research by name is not possible with this command.
+///    <example> list 10 9999999
+///
+///  listban [start_id [end_id]]
+///    Like list/ls, but only for accounts with state or banished
+///
+///  listgm [start_id [end_id]]
+///    Like list/ls, but only for GM accounts
+///
+///  listok [start_id [end_id]]
+///   Like list/ls, but only for accounts without state and not banished
+///
+///  memo <account_name> <memo>
+///    Modify the memo of an account.
+///    'memo': it can have until 253 characters (with spaces or not).
+///
+///  name <account_id>
+///    Give the name of an account.
+///
+///  password <account_name> <new_password>
+///    Change the password of an account.
+///    When new password is omitted, the input is done without displaying of the pressed keys.
+///
+///  quit/end/exit
+///    End of the program of administration
+///
+///  reloadgm
+///    Reload GM configuration file
+///
+///  search <expression>
+///    Seek accounts.
+///    Displays the accounts whose names correspond.
+///  search -r/-e/--expr/--regex <expression>
+///    Seek accounts by regular expression.
+///    Displays the accounts whose names correspond.
+///
+///  sex <account_name> <sex>
+///    Modify the sex of an account.
+///    <example> sex testname Male
+///
+///  state <account_name> <new_state> <error_message_#7>
+///    Change the state of an account.
+///    'new_state': state is the state of the packet 0x006a + 1. The possibilities are:
+///                 0 = Account ok            6 = Your Game's EXE file is not the latest version
+///                 1 = Unregistered ID       7 = You are Prohibited to log in until %s
+///                 2 = Incorrect Password    8 = Server is jammed due to over populated
+///                 3 = This ID is expired    9 = No MSG
+///                 4 = Rejected from Server  100 = This ID has been totally erased
+///                 5 = You have been blocked by the GM Team
+///                 all other values are 'No MSG', then use state 9 please.
+///    'error_message_#7': message of the code error 6 = Your are Prohibited to log in until %s (packet 0x006a)
+///
+///  unban/unbanish <account name>
+///    Unban an account.
+///    Like banset <account name> 0.
+///
+///  unblock <account name>
+///    Set state 0 (Account ok) to an account.
+///    Like state <account name> 0.
+///
+///  version
+///    Display the version of the login-server.
+///
+///  who <account name>
+///    Displays complete information of an account.
+///
+///-------------------------------------------------------------------------
 
 //------------------------------
 // Writing function of logs file
