@@ -6,6 +6,7 @@ var searchData=
   ['accountname',['AccountName',['../structtmwa_1_1AccountName.html',1,'tmwa']]],
   ['accountpass',['AccountPass',['../structtmwa_1_1AccountPass.html',1,'tmwa']]],
   ['accreg',['accreg',['../structtmwa_1_1char___1_1accreg.html',1,'tmwa::char_']]],
+  ['addaccount',['addaccount',['../namespacetmwa_1_1admin.html#a2b41661c585a2bf4d9328d6da27b9739',1,'tmwa::admin']]],
   ['appendfile',['AppendFile',['../classtmwa_1_1io_1_1AppendFile.html',1,'tmwa::io']]],
   ['area_5ft',['area_t',['../structtmwa_1_1map_1_1magic_1_1area__t.html',1,'tmwa::map::magic']]],
   ['area_5ft',['area_t',['../classmagic-interpreter_1_1area__t.html',1,'magic-interpreter']]],

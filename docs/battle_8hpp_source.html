@@ -131,7 +131,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">int</span> damage;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    DamageType type;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">int</span> div_;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    interval_t amotion, dmotion;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="namespacetmwa.html#af59b0f10ec472d5e7c930479d02ef9e6">interval_t</a> amotion, dmotion;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    BF flag;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    ATK dmg_lv;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;};</div>
@@ -153,7 +153,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">// 通常攻撃処理まとめ</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;ATK battle_weapon_attack(<a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;block_list&gt;</a> bl, <a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;block_list&gt;</a> target,</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        tick_t tick);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <a class="code" href="namespacetmwa.html#ac98da45688dcc13cc1a5b154209e0056">tick_t</a> tick);</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keywordtype">int</span> battle_is_unarmed(<a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;block_list&gt;</a> bl);</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<a class="code" href="classtmwa_1_1Species.html">Species</a> battle_get_class(<a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;block_list&gt;</a> bl);</div>
@@ -172,10 +172,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keywordtype">int</span> battle_get_mdef(<a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;block_list&gt;</a> bl);</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keywordtype">int</span> battle_get_def2(<a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;block_list&gt;</a> bl);</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keywordtype">int</span> battle_get_mdef2(<a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;block_list&gt;</a> bl);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;interval_t battle_get_speed(<a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;block_list&gt;</a> bl);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;interval_t battle_get_adelay(<a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;block_list&gt;</a> bl);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;interval_t battle_get_amotion(<a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;block_list&gt;</a> bl);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;interval_t battle_get_dmotion(<a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;block_list&gt;</a> bl);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<a class="code" href="namespacetmwa.html#af59b0f10ec472d5e7c930479d02ef9e6">interval_t</a> battle_get_speed(<a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;block_list&gt;</a> bl);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<a class="code" href="namespacetmwa.html#af59b0f10ec472d5e7c930479d02ef9e6">interval_t</a> battle_get_adelay(<a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;block_list&gt;</a> bl);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<a class="code" href="namespacetmwa.html#af59b0f10ec472d5e7c930479d02ef9e6">interval_t</a> battle_get_amotion(<a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;block_list&gt;</a> bl);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<a class="code" href="namespacetmwa.html#af59b0f10ec472d5e7c930479d02ef9e6">interval_t</a> battle_get_dmotion(<a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;block_list&gt;</a> bl);</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<a class="code" href="structtmwa_1_1map_1_1LevelElement.html">LevelElement</a> battle_get_element(<a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;block_list&gt;</a> bl);</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">inline</span></div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;Element battle_get_elem_type(<a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;block_list&gt;</a> bl)</div>
@@ -206,10 +206,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="namespacedumb__ptr_html"><div class="ttname"><a href="namespacedumb__ptr.html">dumb_ptr</a></div><div class="ttdef"><b>Definition:</b> dumb_ptr.py:1</div></div>
 <div class="ttc" id="classtmwa_1_1eptr_html"><div class="ttname"><a href="classtmwa_1_1eptr.html">tmwa::eptr</a></div><div class="ttdef"><b>Definition:</b> enum.hpp:39</div></div>
 <div class="ttc" id="structtmwa_1_1map_1_1LevelElement_html"><div class="ttname"><a href="structtmwa_1_1map_1_1LevelElement.html">tmwa::map::LevelElement</a></div><div class="ttdef"><b>Definition:</b> battle.t.hpp:156</div></div>
+<div class="ttc" id="namespacetmwa_html_ac98da45688dcc13cc1a5b154209e0056"><div class="ttname"><a href="namespacetmwa.html#ac98da45688dcc13cc1a5b154209e0056">tmwa::tick_t</a></div><div class="ttdeci">milli_clock::time_point tick_t</div><div class="ttdoc">A point in time. </div><div class="ttdef"><b>Definition:</b> timer.t.hpp:74</div></div>
 <div class="ttc" id="structtmwa_1_1map_1_1block__list_html"><div class="ttname"><a href="structtmwa_1_1map_1_1block__list.html">tmwa::map::block_list</a></div><div class="ttdef"><b>Definition:</b> map.hpp:72</div></div>
 <div class="ttc" id="classtmwa_1_1PartyId_html"><div class="ttname"><a href="classtmwa_1_1PartyId.html">tmwa::PartyId</a></div><div class="ttdef"><b>Definition:</b> ids.hpp:39</div></div>
-<div class="ttc" id="namespacetmwa_html"><div class="ttname"><a href="namespacetmwa.html">tmwa</a></div><div class="ttdef"><b>Definition:</b> fwd.hpp:33</div></div>
+<div class="ttc" id="namespacetmwa_html"><div class="ttname"><a href="namespacetmwa.html">tmwa</a></div><div class="ttdoc">tmwa namespace </div><div class="ttdef"><b>Definition:</b> fwd.hpp:33</div></div>
 <div class="ttc" id="classtmwa_1_1dumb__ptr_html"><div class="ttname"><a href="classtmwa_1_1dumb__ptr.html">tmwa::dumb_ptr</a></div><div class="ttdef"><b>Definition:</b> dumb_ptr.hpp:32</div></div>
+<div class="ttc" id="namespacetmwa_html_af59b0f10ec472d5e7c930479d02ef9e6"><div class="ttname"><a href="namespacetmwa.html#af59b0f10ec472d5e7c930479d02ef9e6">tmwa::interval_t</a></div><div class="ttdeci">milli_clock::duration interval_t</div><div class="ttdoc">The difference between two points in time. </div><div class="ttdef"><b>Definition:</b> timer.t.hpp:76</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

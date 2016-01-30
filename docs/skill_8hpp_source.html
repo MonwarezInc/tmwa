@@ -187,8 +187,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keywordtype">int</span> skill_additional_effect(<a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;block_list&gt;</a> src, <a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;block_list&gt;</a> bl,</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        SkillID skillid, <span class="keywordtype">int</span> skilllv);</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;interval_t skill_castfix(<a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;block_list&gt;</a> bl, interval_t time);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;interval_t skill_delayfix(<a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;block_list&gt;</a> bl, interval_t time);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<a class="code" href="namespacetmwa.html#af59b0f10ec472d5e7c930479d02ef9e6">interval_t</a> skill_castfix(<a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;block_list&gt;</a> bl, <a class="code" href="namespacetmwa.html#af59b0f10ec472d5e7c930479d02ef9e6">interval_t</a> time);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<a class="code" href="namespacetmwa.html#af59b0f10ec472d5e7c930479d02ef9e6">interval_t</a> skill_delayfix(<a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;block_list&gt;</a> bl, <a class="code" href="namespacetmwa.html#af59b0f10ec472d5e7c930479d02ef9e6">interval_t</a> time);</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="keywordtype">void</span> skill_stop_dancing(<a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;block_list&gt;</a> src, <span class="keywordtype">int</span> flag);</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
@@ -198,10 +198,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">// ステータス異常</span></div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keywordtype">int</span> skill_status_effect(<a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;block_list&gt;</a> bl, StatusChange type,</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordtype">int</span> val1,</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        interval_t tick, <a class="code" href="classtmwa_1_1BlockId.html">BlockId</a> spell_invocation);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <a class="code" href="namespacetmwa.html#af59b0f10ec472d5e7c930479d02ef9e6">interval_t</a> tick, <a class="code" href="classtmwa_1_1BlockId.html">BlockId</a> spell_invocation);</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="keywordtype">int</span> skill_status_change_start(<a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;block_list&gt;</a> bl, StatusChange type,</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordtype">int</span> val1,</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        interval_t tick);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <a class="code" href="namespacetmwa.html#af59b0f10ec472d5e7c930479d02ef9e6">interval_t</a> tick);</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keywordtype">int</span> skill_status_change_active(<a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;block_list&gt;</a> bl, StatusChange type);  <span class="comment">// [fate]</span></div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="keywordtype">void</span> skill_status_change_end(<a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;block_list&gt;</a> bl, StatusChange type, <a class="code" href="structtmwa_1_1TimerData.html">TimerData</a> *tid);</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="keywordtype">int</span> skill_status_change_clear(<a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;block_list&gt;</a> bl, <span class="keywordtype">int</span> type);</div>
@@ -210,7 +210,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="keywordtype">int</span> skill_castend_nodamage_id(<a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;block_list&gt;</a> src, <a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;block_list&gt;</a> bl,</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        SkillID skillid, <span class="keywordtype">int</span> skilllv);</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="keywordtype">int</span> skill_castend_damage_id(<a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;block_list&gt;</a> src, <a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;block_list&gt;</a> bl,</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        SkillID skillid, <span class="keywordtype">int</span> skilllv, tick_t tick,</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        SkillID skillid, <span class="keywordtype">int</span> skilllv, <a class="code" href="namespacetmwa.html#ac98da45688dcc13cc1a5b154209e0056">tick_t</a> tick,</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        BCT flag);</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="keywordtype">int</span> skill_update_heal_animation(<a class="code" href="classtmwa_1_1dumb__ptr.html">dumb_ptr&lt;map_session_data&gt;</a> sd); <span class="comment">// [Fate]  Check whether the healing flag must be updated, do so if needed</span></div>
@@ -256,11 +256,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classtmwa_1_1strings_1_1LString_html"><div class="ttname"><a href="classtmwa_1_1strings_1_1LString.html">tmwa::strings::LString</a></div><div class="ttdef"><b>Definition:</b> literal.hpp:32</div></div>
 <div class="ttc" id="classtmwa_1_1strings_1_1XString_html"><div class="ttname"><a href="classtmwa_1_1strings_1_1XString.html">tmwa::strings::XString</a></div><div class="ttdef"><b>Definition:</b> xstring.hpp:32</div></div>
 <div class="ttc" id="classtmwa_1_1strings_1_1RString_html"><div class="ttname"><a href="classtmwa_1_1strings_1_1RString.html">tmwa::strings::RString</a></div><div class="ttdef"><b>Definition:</b> rstring.hpp:34</div></div>
+<div class="ttc" id="namespacetmwa_html_ac98da45688dcc13cc1a5b154209e0056"><div class="ttname"><a href="namespacetmwa.html#ac98da45688dcc13cc1a5b154209e0056">tmwa::tick_t</a></div><div class="ttdeci">milli_clock::time_point tick_t</div><div class="ttdoc">A point in time. </div><div class="ttdef"><b>Definition:</b> timer.t.hpp:74</div></div>
 <div class="ttc" id="structtmwa_1_1TimerData_html"><div class="ttname"><a href="structtmwa_1_1TimerData.html">tmwa::TimerData</a></div><div class="ttdef"><b>Definition:</b> timer.cpp:38</div></div>
-<div class="ttc" id="namespacetmwa_html"><div class="ttname"><a href="namespacetmwa.html">tmwa</a></div><div class="ttdef"><b>Definition:</b> fwd.hpp:33</div></div>
+<div class="ttc" id="namespacetmwa_html"><div class="ttname"><a href="namespacetmwa.html">tmwa</a></div><div class="ttdoc">tmwa namespace </div><div class="ttdef"><b>Definition:</b> fwd.hpp:33</div></div>
 <div class="ttc" id="classtmwa_1_1strings_1_1ZString_html"><div class="ttname"><a href="classtmwa_1_1strings_1_1ZString.html">tmwa::strings::ZString</a></div><div class="ttdef"><b>Definition:</b> zstring.hpp:32</div></div>
 <div class="ttc" id="structtmwa_1_1GenericArray_html"><div class="ttname"><a href="structtmwa_1_1GenericArray.html">tmwa::GenericArray</a></div><div class="ttdef"><b>Definition:</b> array.hpp:71</div></div>
 <div class="ttc" id="classtmwa_1_1dumb__ptr_html"><div class="ttname"><a href="classtmwa_1_1dumb__ptr.html">tmwa::dumb_ptr</a></div><div class="ttdef"><b>Definition:</b> dumb_ptr.hpp:32</div></div>
+<div class="ttc" id="namespacetmwa_html_af59b0f10ec472d5e7c930479d02ef9e6"><div class="ttname"><a href="namespacetmwa.html#af59b0f10ec472d5e7c930479d02ef9e6">tmwa::interval_t</a></div><div class="ttdeci">milli_clock::duration interval_t</div><div class="ttdoc">The difference between two points in time. </div><div class="ttdef"><b>Definition:</b> timer.t.hpp:76</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -168,12 +168,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keywordtype">void</span> clif_delitem(dumb_ptr&lt;map_session_data&gt;, IOff0, <span class="keywordtype">int</span>);    <span class="comment">//self</span></div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keywordtype">int</span> clif_updatestatus(dumb_ptr&lt;map_session_data&gt;, SP);    <span class="comment">//self</span></div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keywordtype">int</span> clif_damage(dumb_ptr&lt;block_list&gt;, dumb_ptr&lt;block_list&gt;,</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        tick_t, interval_t, interval_t,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <a class="code" href="namespacetmwa.html#ac98da45688dcc13cc1a5b154209e0056">tick_t</a>, <a class="code" href="namespacetmwa.html#af59b0f10ec472d5e7c930479d02ef9e6">interval_t</a>, <a class="code" href="namespacetmwa.html#af59b0f10ec472d5e7c930479d02ef9e6">interval_t</a>,</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordtype">int</span>, <span class="keywordtype">int</span>, DamageType);    <span class="comment">// area</span></div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">inline</span></div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keywordtype">int</span> clif_takeitem(dumb_ptr&lt;block_list&gt; src, dumb_ptr&lt;block_list&gt; dst)</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;{</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">return</span> clif_damage(src, dst, tick_t(), interval_t::zero(), interval_t::zero(), 0, 0, DamageType::TAKEITEM);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">return</span> clif_damage(src, dst, <a class="code" href="namespacetmwa.html#ac98da45688dcc13cc1a5b154209e0056">tick_t</a>(), interval_t::zero(), interval_t::zero(), 0, 0, DamageType::TAKEITEM);</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordtype">int</span> clif_changelook(dumb_ptr&lt;block_list&gt;, LOOK, <span class="keywordtype">int</span>);   <span class="comment">// area</span></div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keywordtype">void</span> clif_changelook_accessories(dumb_ptr&lt;block_list&gt; bl, dumb_ptr&lt;map_session_data&gt; dst); <span class="comment">// area or target; list gloves, boots etc.</span></div>
@@ -235,7 +235,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="keywordtype">int</span> clif_skill_fail(dumb_ptr&lt;map_session_data&gt; sd, SkillID skill_id, <span class="keywordtype">int</span> type,</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keywordtype">int</span> btype);</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="keywordtype">int</span> clif_skill_damage(dumb_ptr&lt;block_list&gt; src, dumb_ptr&lt;block_list&gt; dst,</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        tick_t tick, interval_t sdelay, interval_t ddelay, <span class="keywordtype">int</span> damage,</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <a class="code" href="namespacetmwa.html#ac98da45688dcc13cc1a5b154209e0056">tick_t</a> tick, <a class="code" href="namespacetmwa.html#af59b0f10ec472d5e7c930479d02ef9e6">interval_t</a> sdelay, <a class="code" href="namespacetmwa.html#af59b0f10ec472d5e7c930479d02ef9e6">interval_t</a> ddelay, <span class="keywordtype">int</span> damage,</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordtype">int</span> div, SkillID skill_id, <span class="keywordtype">int</span> skill_lv, <span class="keywordtype">int</span> type);</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="keywordtype">int</span> clif_status_change(dumb_ptr&lt;block_list&gt; bl,</div>
@@ -284,7 +284,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;} <span class="comment">// namespace map</span></div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;} <span class="comment">// namespace tmwa</span></div>
 <div class="ttc" id="namespacemap_html"><div class="ttname"><a href="namespacemap.html">map</a></div><div class="ttdef"><b>Definition:</b> map.py:1</div></div>
-<div class="ttc" id="namespacetmwa_html"><div class="ttname"><a href="namespacetmwa.html">tmwa</a></div><div class="ttdef"><b>Definition:</b> fwd.hpp:33</div></div>
+<div class="ttc" id="namespacetmwa_html_ac98da45688dcc13cc1a5b154209e0056"><div class="ttname"><a href="namespacetmwa.html#ac98da45688dcc13cc1a5b154209e0056">tmwa::tick_t</a></div><div class="ttdeci">milli_clock::time_point tick_t</div><div class="ttdoc">A point in time. </div><div class="ttdef"><b>Definition:</b> timer.t.hpp:74</div></div>
+<div class="ttc" id="namespacetmwa_html"><div class="ttname"><a href="namespacetmwa.html">tmwa</a></div><div class="ttdoc">tmwa namespace </div><div class="ttdef"><b>Definition:</b> fwd.hpp:33</div></div>
+<div class="ttc" id="namespacetmwa_html_af59b0f10ec472d5e7c930479d02ef9e6"><div class="ttname"><a href="namespacetmwa.html#af59b0f10ec472d5e7c930479d02ef9e6">tmwa::interval_t</a></div><div class="ttdeci">milli_clock::duration interval_t</div><div class="ttdoc">The difference between two points in time. </div><div class="ttdef"><b>Definition:</b> timer.t.hpp:76</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

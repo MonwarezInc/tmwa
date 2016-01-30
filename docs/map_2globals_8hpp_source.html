@@ -172,8 +172,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">extern</span> tm ev_tm_b;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keyword">extern</span> Map&lt;PartyId, PartyMost&gt; party_db;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keyword">extern</span> std::map&lt;AccountId, GmLevel&gt; gm_accountm;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keyword">extern</span> tick_t natural_heal_tick, natural_heal_prev_tick;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keyword">extern</span> interval_t natural_heal_diff_tick;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keyword">extern</span> <a class="code" href="namespacetmwa.html#ac98da45688dcc13cc1a5b154209e0056">tick_t</a> natural_heal_tick, natural_heal_prev_tick;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keyword">extern</span> <a class="code" href="namespacetmwa.html#af59b0f10ec472d5e7c930479d02ef9e6">interval_t</a> natural_heal_diff_tick;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keyword">extern</span> <span class="keywordtype">int</span> last_save_fd;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keyword">extern</span> <span class="keywordtype">bool</span> save_flag;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keyword">extern</span> Map&lt;AccountId, Storage&gt; storage_db;</div>
@@ -198,7 +198,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    } <span class="comment">// namespace map</span></div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;} <span class="comment">// namespace tmwa</span></div>
 <div class="ttc" id="namespacemap_html"><div class="ttname"><a href="namespacemap.html">map</a></div><div class="ttdef"><b>Definition:</b> map.py:1</div></div>
-<div class="ttc" id="namespacetmwa_html"><div class="ttname"><a href="namespacetmwa.html">tmwa</a></div><div class="ttdef"><b>Definition:</b> fwd.hpp:33</div></div>
+<div class="ttc" id="namespacetmwa_html_ac98da45688dcc13cc1a5b154209e0056"><div class="ttname"><a href="namespacetmwa.html#ac98da45688dcc13cc1a5b154209e0056">tmwa::tick_t</a></div><div class="ttdeci">milli_clock::time_point tick_t</div><div class="ttdoc">A point in time. </div><div class="ttdef"><b>Definition:</b> timer.t.hpp:74</div></div>
+<div class="ttc" id="namespacetmwa_html"><div class="ttname"><a href="namespacetmwa.html">tmwa</a></div><div class="ttdoc">tmwa namespace </div><div class="ttdef"><b>Definition:</b> fwd.hpp:33</div></div>
+<div class="ttc" id="namespacetmwa_html_af59b0f10ec472d5e7c930479d02ef9e6"><div class="ttname"><a href="namespacetmwa.html#af59b0f10ec472d5e7c930479d02ef9e6">tmwa::interval_t</a></div><div class="ttdeci">milli_clock::duration interval_t</div><div class="ttdoc">The difference between two points in time. </div><div class="ttdef"><b>Definition:</b> timer.t.hpp:76</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

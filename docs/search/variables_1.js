@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['func',['func',['../structtmwa_1_1TimerData.html#a168ba2a3a756097ac27a222e4d93efca',1,'tmwa::TimerData']]]
+  ['created',['created',['../structtmwa_1_1Session.html#a2e51552b9c1ee422872e81dfabfb5746',1,'tmwa::Session']]]
 ];

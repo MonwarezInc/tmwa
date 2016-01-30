@@ -126,12 +126,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T, <span class="keywordtype">size_t</span> n&gt;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;constexpr</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">bool</span> _ce_a_lt(T (&amp;a)[n], T (&amp;b)[n], <span class="keywordtype">size_t</span> i=0)</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="namespacetmwa.html#ab4ef56d6a59af3c64cfee630f0a7a091">   40</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="namespacetmwa.html#ab4ef56d6a59af3c64cfee630f0a7a091">_ce_a_lt</a>(T (&amp;a)[n], T (&amp;b)[n], <span class="keywordtype">size_t</span> i=0)</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">return</span> (i != n</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            &amp;&amp; (a[i] &lt; b[i]</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                || (a[i] == b[i]</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                    &amp;&amp; _ce_a_lt(a, b, i + 1))));</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                    &amp;&amp; <a class="code" href="namespacetmwa.html#ab4ef56d6a59af3c64cfee630f0a7a091">_ce_a_lt</a>(a, b, i + 1))));</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
 <div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classtmwa_1_1IP4Address.html">   50</a></span>&#160;<span class="keyword">class </span><a class="code" href="classtmwa_1_1IP4Address.html">IP4Address</a></div>
@@ -178,25 +178,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    constexpr <span class="keyword">friend</span></div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">bool</span> operator &lt; (IP4Address l, IP4Address r)</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    {</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">return</span> _ce_a_lt(l._addr, r._addr);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespacetmwa.html#ab4ef56d6a59af3c64cfee630f0a7a091">_ce_a_lt</a>(l._addr, r._addr);</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    constexpr <span class="keyword">friend</span></div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">bool</span> operator &gt; (IP4Address l, IP4Address r)</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    {</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">return</span> _ce_a_lt(r._addr, l._addr);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespacetmwa.html#ab4ef56d6a59af3c64cfee630f0a7a091">_ce_a_lt</a>(r._addr, l._addr);</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    constexpr <span class="keyword">friend</span></div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">bool</span> operator &gt;= (IP4Address l, IP4Address r)</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    {</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">return</span> !_ce_a_lt(l._addr, r._addr);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">return</span> !<a class="code" href="namespacetmwa.html#ab4ef56d6a59af3c64cfee630f0a7a091">_ce_a_lt</a>(l._addr, r._addr);</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    constexpr <span class="keyword">friend</span></div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">bool</span> operator &lt;= (IP4Address l, IP4Address r)</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    {</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">return</span> !_ce_a_lt(r._addr, l._addr);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">return</span> !<a class="code" href="namespacetmwa.html#ab4ef56d6a59af3c64cfee630f0a7a091">_ce_a_lt</a>(r._addr, l._addr);</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    constexpr <span class="keyword">friend</span></div>
@@ -253,7 +253,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;} <span class="comment">// namespace tmwa</span></div>
 <div class="ttc" id="classtmwa_1_1IP4Mask_html"><div class="ttname"><a href="classtmwa_1_1IP4Mask.html">tmwa::IP4Mask</a></div><div class="ttdef"><b>Definition:</b> ip.hpp:128</div></div>
 <div class="ttc" id="classtmwa_1_1IP4Address_html"><div class="ttname"><a href="classtmwa_1_1IP4Address.html">tmwa::IP4Address</a></div><div class="ttdef"><b>Definition:</b> ip.hpp:50</div></div>
-<div class="ttc" id="namespacetmwa_html"><div class="ttname"><a href="namespacetmwa.html">tmwa</a></div><div class="ttdef"><b>Definition:</b> fwd.hpp:33</div></div>
+<div class="ttc" id="namespacetmwa_html_ab4ef56d6a59af3c64cfee630f0a7a091"><div class="ttname"><a href="namespacetmwa.html#ab4ef56d6a59af3c64cfee630f0a7a091">tmwa::_ce_a_lt</a></div><div class="ttdeci">constexpr bool _ce_a_lt(T(&amp;a)[n], T(&amp;b)[n], size_t i=0)</div><div class="ttdoc">Helper function. </div><div class="ttdef"><b>Definition:</b> ip.hpp:40</div></div>
+<div class="ttc" id="namespacetmwa_html"><div class="ttname"><a href="namespacetmwa.html">tmwa</a></div><div class="ttdoc">tmwa namespace </div><div class="ttdef"><b>Definition:</b> fwd.hpp:33</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

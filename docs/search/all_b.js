@@ -1,6 +1,9 @@
 var searchData=
 [
   ['magic_5fconf_5ft',['magic_conf_t',['../structtmwa_1_1map_1_1magic_1_1magic__conf__t.html',1,'tmwa::map::magic']]],
+  ['make_5fconnection',['make_connection',['../namespacetmwa.html#aa2af4cb486eb5bde41daaabb9250081f',1,'tmwa']]],
+  ['make_5flisten_5fport',['make_listen_port',['../namespacetmwa.html#a907cc2df9257141e17e3e3b414982f33',1,'tmwa']]],
+  ['make_5fsalt',['make_salt',['../namespacetmwa.html#a17da1d222b4ac144f150c7a30ac9a7b5',1,'tmwa']]],
   ['map',['Map',['../classtmwa_1_1Map.html',1,'tmwa']]],
   ['map_3c_20k_2c_20u_20_3e',['Map&lt; K, U &gt;',['../classtmwa_1_1Map.html',1,'tmwa']]],
   ['map_3c_20tmwa_3a_3amap_3a_3asir_2c_20int_20_3e',['Map&lt; tmwa::map::SIR, int &gt;',['../classtmwa_1_1Map.html',1,'tmwa']]],
@@ -22,6 +25,7 @@ var searchData=
   ['mcvar',['mcvar',['../structtmwa_1_1map_1_1magic_1_1magic__conf__t_1_1mcvar.html',1,'tmwa::map::magic::magic_conf_t']]],
   ['md5_5fbinary',['md5_binary',['../structtmwa_1_1md5__binary.html',1,'tmwa']]],
   ['md5_5fblock',['MD5_block',['../structtmwa_1_1MD5__block.html',1,'tmwa']]],
+  ['md5_5fip',['MD5_ip',['../namespacetmwa.html#ace44bd37ee3e8f84b51587f5baba05a4',1,'tmwa']]],
   ['md5_5fstate',['MD5_state',['../structtmwa_1_1MD5__state.html',1,'tmwa']]],
   ['md5_5fstring',['md5_string',['../structtmwa_1_1md5__string.html',1,'tmwa']]],
   ['milli_5fclock',['milli_clock',['../classtmwa_1_1milli__clock.html',1,'tmwa']]],

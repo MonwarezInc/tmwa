@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['operator_20bool',['operator bool',['../classtmwa_1_1Timer.html#aac028fa0ee045a71506ac10108c8b205',1,'tmwa::Timer']]],
-  ['operator_21',['operator!',['../classtmwa_1_1Timer.html#a45b188bbe838c95e2a8187a6ff92c43e',1,'tmwa::Timer']]],
-  ['operator_28_29',['operator()',['../structtmwa_1_1TimerCompare.html#a107a9fa8042a347a10b379573d03ba59',1,'tmwa::TimerCompare']]]
+  ['banaccount',['banaccount',['../namespacetmwa_1_1admin.html#a7a160e77ab918d32367fb83c6c7694bd',1,'tmwa::admin']]],
+  ['banaddaccount',['banaddaccount',['../namespacetmwa_1_1admin.html#a55a902e60d5a7efa360ad9649fdb8d6e',1,'tmwa::admin']]],
+  ['bansetaccount',['bansetaccount',['../namespacetmwa_1_1admin.html#a5450af120950fedebb4981037c28461b',1,'tmwa::admin']]],
+  ['bansetaccountsub',['bansetaccountsub',['../namespacetmwa_1_1admin.html#a0100c660071f158d15ba209a097efbe2',1,'tmwa::admin']]]
 ];

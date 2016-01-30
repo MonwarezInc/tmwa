@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['created',['created',['../structtmwa_1_1Session.html#a2e51552b9c1ee422872e81dfabfb5746',1,'tmwa::Session']]]
+  ['backup_5fcount',['backup_count',['../namespacetmwa.html#aead2aca5d9e6d8e62f7c3545891bb989',1,'tmwa']]]
 ];

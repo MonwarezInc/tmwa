@@ -118,21 +118,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">// updated automatically when using milli_clock::now()</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">// which is done only by core.cpp</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">extern</span> tick_t gettick_cache;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">extern</span> <a class="code" href="namespacetmwa.html#ac98da45688dcc13cc1a5b154209e0056">tick_t</a> gettick_cache;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">inline</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;tick_t gettick(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<a class="code" href="namespacetmwa.html#ac98da45688dcc13cc1a5b154209e0056">tick_t</a> gettick(<span class="keywordtype">void</span>)</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> gettick_cache;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;interval_t do_timer(tick_t tick);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<a class="code" href="namespacetmwa.html#af59b0f10ec472d5e7c930479d02ef9e6">interval_t</a> <a class="code" href="namespacetmwa.html#ae0c7e6062f075893a60c5519d20e22af">do_timer</a>(<a class="code" href="namespacetmwa.html#ac98da45688dcc13cc1a5b154209e0056">tick_t</a> tick);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;tick_t file_modified(ZString name);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<a class="code" href="namespacetmwa.html#ac98da45688dcc13cc1a5b154209e0056">tick_t</a> <a class="code" href="namespacetmwa.html#a322a0ade0fe28f016a9be8471fea7c57">file_modified</a>(ZString name);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">bool</span> has_timers();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="namespacetmwa.html#a2eeb543f3fdbc5b2a99f98cf9133d0bc">has_timers</a>();</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;} <span class="comment">// namespace tmwa</span></div>
-<div class="ttc" id="namespacetmwa_html"><div class="ttname"><a href="namespacetmwa.html">tmwa</a></div><div class="ttdef"><b>Definition:</b> fwd.hpp:33</div></div>
+<div class="ttc" id="namespacetmwa_html_a2eeb543f3fdbc5b2a99f98cf9133d0bc"><div class="ttname"><a href="namespacetmwa.html#a2eeb543f3fdbc5b2a99f98cf9133d0bc">tmwa::has_timers</a></div><div class="ttdeci">bool has_timers()</div><div class="ttdoc">Check if there are any events at all scheduled. </div><div class="ttdef"><b>Definition:</b> timer.cpp:217</div></div>
+<div class="ttc" id="namespacetmwa_html_a322a0ade0fe28f016a9be8471fea7c57"><div class="ttname"><a href="namespacetmwa.html#a322a0ade0fe28f016a9be8471fea7c57">tmwa::file_modified</a></div><div class="ttdeci">tick_t file_modified(ZString name)</div><div class="ttdoc">Stat a file, and return its modification time, truncated to seconds. </div><div class="ttdef"><b>Definition:</b> timer.cpp:209</div></div>
+<div class="ttc" id="namespacetmwa_html_ac98da45688dcc13cc1a5b154209e0056"><div class="ttname"><a href="namespacetmwa.html#ac98da45688dcc13cc1a5b154209e0056">tmwa::tick_t</a></div><div class="ttdeci">milli_clock::time_point tick_t</div><div class="ttdoc">A point in time. </div><div class="ttdef"><b>Definition:</b> timer.t.hpp:74</div></div>
+<div class="ttc" id="namespacetmwa_html_ae0c7e6062f075893a60c5519d20e22af"><div class="ttname"><a href="namespacetmwa.html#ae0c7e6062f075893a60c5519d20e22af">tmwa::do_timer</a></div><div class="ttdeci">interval_t do_timer(tick_t tick)</div><div class="ttdef"><b>Definition:</b> timer.cpp:165</div></div>
+<div class="ttc" id="namespacetmwa_html"><div class="ttname"><a href="namespacetmwa.html">tmwa</a></div><div class="ttdoc">tmwa namespace </div><div class="ttdef"><b>Definition:</b> fwd.hpp:33</div></div>
+<div class="ttc" id="namespacetmwa_html_af59b0f10ec472d5e7c930479d02ef9e6"><div class="ttname"><a href="namespacetmwa.html#af59b0f10ec472d5e7c930479d02ef9e6">tmwa::interval_t</a></div><div class="ttdeci">milli_clock::duration interval_t</div><div class="ttdoc">The difference between two points in time. </div><div class="ttdef"><b>Definition:</b> timer.t.hpp:76</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

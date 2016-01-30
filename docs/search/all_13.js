@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['unbanaccount',['unbanaccount',['../namespacetmwa_1_1admin.html#a72a2353d7ba87a27ebd4c2b94c41eeb0',1,'tmwa::admin']]],
   ['underlying_5ftype',['underlying_type',['../structtmwa_1_1underlying__type.html',1,'tmwa']]],
   ['union',['Union',['../classtmwa_1_1sexpr_1_1Union.html',1,'tmwa::sexpr']]],
   ['union_3c_20d_2c_20t_2e_2e_2e_20_3e',['Union&lt; D, T... &gt;',['../classtmwa_1_1sexpr_1_1Union.html',1,'tmwa::sexpr']]],
