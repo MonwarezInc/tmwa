@@ -311,7 +311,8 @@ bool qsplit(ZString src, F first, R... rest)
 }
 
 //-----------------------------------------
-// Sub-function: Display commands of ladmin
+/// \brief Sub-function: Display commands of ladmin
+///	 @param	param	the ZString parameter
 //-----------------------------------------
 static
 void display_help(ZString param)
@@ -592,7 +593,8 @@ void display_help(ZString param)
 }
 
 //-----------------------------
-// Sub-function: add an account
+///	@param	param		the paramater
+///	@param	emaiflag	flag to know if email are provided or not
 //-----------------------------
 static
 void addaccount(ZString param, int emailflag)
@@ -661,7 +663,8 @@ void addaccount(ZString param, int emailflag)
 }
 
 //---------------------------------------------------------------------------------
-// Sub-function: Add/substract time to the final date of a banishment of an account
+/// \brief Sub-function: Add/substract time to the final date of a banishment of an account
+///	@param	param	parameter of the command
 //---------------------------------------------------------------------------------
 static
 void banaddaccount(ZString param)
@@ -709,8 +712,11 @@ void banaddaccount(ZString param)
 }
 
 //-----------------------------------------------------------------------
-// Sub-function of sub-function banaccount, unbanaccount or bansetaccount
-// Set the final date of a banishment of an account
+/// \brief Sub-function of sub-function banaccount, unbanaccount or bansetaccount
+/// Set the final date of a banishment of an account
+///	@param	name	the name of the account
+///	@param	date	the date of the event
+///	@param	time_	the the time of the event
 //-----------------------------------------------------------------------
 static
 void bansetaccountsub(AccountName name, XString date, XString time_)
@@ -818,7 +824,8 @@ void bansetaccountsub(AccountName name, XString date, XString time_)
 }
 
 //---------------------------------------------------------------------
-// Sub-function: Set the final date of a banishment of an account (ban)
+/// \brief Sub-function: Set the final date of a banishment of an account (ban)
+///	@param	param	the parameter of the command
 //---------------------------------------------------------------------
 static
 void banaccount(ZString param)
@@ -846,7 +853,8 @@ void banaccount(ZString param)
 }
 
 //------------------------------------------------------------------------
-// Sub-function: Set the final date of a banishment of an account (banset)
+/// \brief Sub-function: Set the final date of a banishment of an account (banset)
+///	@param	param	the parameter of the command
 //------------------------------------------------------------------------
 static
 void bansetaccount(ZString param)
@@ -875,7 +883,8 @@ void bansetaccount(ZString param)
 }
 
 //-------------------------------------------------
-// Sub-function: unbanishment of an account (unban)
+/// \brief Sub-function: unbanishment of an account (unban)
+///	@param	param	the parameter of the command
 //-------------------------------------------------
 static
 void unbanaccount(ZString param)
@@ -898,8 +907,9 @@ void unbanaccount(ZString param)
 }
 
 //---------------------------------------------------------
-// Sub-function: Asking to check the validity of a password
-// (Note: never send back a password with login-server!! security of passwords)
+/// \brief Sub-function: Asking to check the validity of a password
+/// 	(Note: never send back a password with login-server!! security of passwords)
+///	@param	param	the parameter of the command
 //---------------------------------------------------------
 static
 void checkaccount(ZString param)
@@ -931,7 +941,8 @@ void checkaccount(ZString param)
 }
 
 //------------------------------------------------
-// Sub-function: Asking for deletion of an account
+/// \brief  Sub-function: Asking for deletion of an account
+///	@param	param	the parameter of the command
 //------------------------------------------------
 static
 void delaccount(ZString param)
@@ -980,7 +991,8 @@ void delaccount(ZString param)
 }
 
 //----------------------------------------------------------
-// Sub-function: Asking to modification of an account e-mail
+/// \brief  Sub-function: Asking to modification of an account e-mail
+/// @param param 	the parameter of the command
 //----------------------------------------------------------
 static
 void changeemail(ZString param)
@@ -1018,7 +1030,7 @@ void changeemail(ZString param)
 }
 
 //-----------------------------------------------------
-// Sub-function: Asking of the number of online players
+/// \brief Sub-function: Asking of the number of online players
 //-----------------------------------------------------
 static
 void getlogincount(void)
@@ -1031,7 +1043,8 @@ void getlogincount(void)
 }
 
 //----------------------------------------------------------
-// Sub-function: Asking to modify the GM level of an account
+/// \brief Sub-function: Asking to modify the GM level of an account
+///	@param	param	the parameter of the command
 //----------------------------------------------------------
 static
 void changegmlevel(ZString param)
@@ -1060,7 +1073,8 @@ void changegmlevel(ZString param)
 }
 
 //---------------------------------------------
-// Sub-function: Asking to obtain an account id
+/// \brief Sub-function: Asking to obtain an account id
+///	@param	param	the parameter of the command
 //---------------------------------------------
 static
 void idaccount(ZString param)
@@ -1089,7 +1103,8 @@ void idaccount(ZString param)
 }
 
 //----------------------------------------------------------------------------
-// Sub-function: Asking to displaying information about an account (by its id)
+/// \brief Sub-function: Asking to displaying information about an account (by its id)
+///	@param	account_id	the id of the account
 //----------------------------------------------------------------------------
 static
 void infoaccount(AccountId account_id)
@@ -1103,7 +1118,8 @@ void infoaccount(AccountId account_id)
 }
 
 //---------------------------------------
-// Sub-function: Send a broadcast message
+/// \brief Sub-function: Send a broadcast message
+///	@param	message	the message to broadcast
 //---------------------------------------
 static
 void sendbroadcast(ZString message)
@@ -1126,7 +1142,14 @@ void sendbroadcast(ZString message)
 
 
 //--------------------------------------------------------
-// Sub-function: Asking to Displaying of the accounts list
+/// \brief Sub-function: Asking to Displaying of the accounts list
+/// 
+///	the second parameter is the type of the list for the moment they have "two" values
+///	value 1,2,3,4 are to get all the list
+/// other value are for get a subset of the list
+///
+///	@param	param	the parameter of the command 
+/// @param	type	the type of the list
 //--------------------------------------------------------
 static
 void listaccount(ZString param, int type)
@@ -1178,7 +1201,8 @@ void listaccount(ZString param, int type)
 }
 
 //--------------------------------------------
-// Sub-function: Asking to modify a memo field
+///	\brief Sub-function: Asking to modify a memo field
+///	@param	param	the parameter of the command
 //--------------------------------------------
 static
 void changememo(ZString param)
@@ -1216,7 +1240,8 @@ void changememo(ZString param)
 }
 
 //-----------------------------------------------
-// Sub-function: Asking to obtain an account name
+///	\brief Sub-function: Asking to obtain an account name
+///	@param	id	the id of the account to get the name
 //-----------------------------------------------
 static
 void nameaccount(AccountId id)
@@ -1230,8 +1255,9 @@ void nameaccount(AccountId id)
 }
 
 //------------------------------------------
-// Sub-function: Asking to modify a password
-// (Note: never send back a password with login-server!! security of passwords)
+/// \brief Sub-function: Asking to modify a password
+/// (Note: never send back a password with login-server!! security of passwords)
+///	@param	param	the parameter of the command
 //------------------------------------------
 static
 void changepasswd(ZString param)
@@ -1265,8 +1291,9 @@ void changepasswd(ZString param)
 }
 
 //----------------------------------------------------------------------
-// Sub-function: Request to login-server to reload GM configuration file
-// this function have no answer
+///	\brief Sub-function: Request to login-server to reload GM configuration file
+/// this function have no answer
+///	@param	params	the parameter of the command
 //----------------------------------------------------------------------
 static
 void reloadGM(ZString params)
